@@ -9,7 +9,7 @@
           src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
   </script>
 </head>
-<body style="background-color:silver">
+<body>
 <p>
 $$ e_f = (\tan\lambda)\left( \frac{\cos\phi_n - \mu\tan\lambda}{\cos\phi_n\tan\lambda + \mu} \right) $$
 $$ e_b = 2 - \frac{1}{e_f} $$
@@ -77,9 +77,9 @@ $$ e_b = 2 - \frac{1}{e_f} $$
 						 var myMu = document.getElementById('box3').valueAsNumber+0;
 						 var result1 = document.getElementById('result1');
 						 var result2 = document.getElementById('result2');
-						 var myResult = 100*((Math.tan(myLambda))*((Math.cos(myPhin))-(myMu*(Math.tan(myLambda)))))/((Math.cos(myPhin))*(Math.tan(myLambda)) + myMu);
+						 var myResult = 100*(Math.tan(myLambda))*(((Math.cos(myPhin))-(myMu*(Math.tan(myLambda))))/((Math.cos(myPhin))*(Math.tan(myLambda)) + myMu));
 						 result1.value = myResult;
-						 result2.value = (2 - (100/myResult))*100;
+						 result2.value = 2 - (100/myResult);
 		}
 </script>
 </html>
